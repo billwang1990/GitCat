@@ -7,12 +7,47 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuViewController.h"
+#import "HomeViewController.h"
+#import "LoginViewController.h"
+#import <MMDrawerController.h>
+#import <SSKeychain.h>
+
+@interface AppDelegate ()
+
+@property (nonatomic) MMDrawerController *viewController;
+@property (nonatomic) LoginViewController *LoginVC;
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [SSKeychain deletePasswordForService:@"access_token" account:@"gitos"];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    if (![self readAccessTokenFromKeyChain]) {
+        //should login
+        self.LoginVC = [[LoginViewController alloc]init];
+        
+        __weak AppDelegate *weakSelf = self;
+        
+        [self.LoginVC setCompleteBlock:^{
+            
+            [weakSelf loadViewController];
+        }];
+        
+        self.window.rootViewController = self.LoginVC;
+        [self.window makeKeyAndVisible];
+    }
+    else
+    {
+        [self loadViewController];
+    }
+    
     return YES;
 }
 							
@@ -41,6 +76,39 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)loadViewController
+{
+    UIStoryboard *storyboard = MainStoryBoard;
+    
+    UINavigationController *homeNav = [storyboard instantiateViewControllerWithIdentifier:@"HomeNav"];
+    
+    MenuViewController   *menu = [storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
+    
+    self.viewController = [[MMDrawerController alloc]initWithCenterViewController:homeNav leftDrawerViewController:menu];
+    
+    [self.viewController setMaximumRightDrawerWidth:200.0];
+    [self.viewController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.viewController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    //change the default rootviewcontroller;
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+
+}
+
+
+-(BOOL)readAccessTokenFromKeyChain
+{
+    NSString *authToken = [SSKeychain passwordForService:@"access_token" account:@"gitos"];
+    
+    NSLog(@"authToken when app starts is %@", authToken);
+    
+    if (!authToken || authToken.length == 0) {
+        return NO;
+    }
+    return YES;
 }
 
 @end

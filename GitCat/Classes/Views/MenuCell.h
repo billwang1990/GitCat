@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MenuCell.h
 //  GitCat
 //
 //  Created by niko on 13-10-11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MenuCell : UITableViewCell
 
 @end

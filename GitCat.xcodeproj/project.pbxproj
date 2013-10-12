@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237709631808F88A004B28E8 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709621808F88A004B28E8 /* MenuCell.m */; };
+		237709661808FA8D004B28E8 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709651808FA8D004B28E8 /* NSString+FontAwesome.m */; };
 		23BE758C180878ED00CD1724 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BE758B180878EC00CD1724 /* UIKit.framework */; };
 		23BE758E180878ED00CD1724 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BE758D180878ED00CD1724 /* Foundation.framework */; };
 		23BE7590180878ED00CD1724 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BE758F180878ED00CD1724 /* CoreGraphics.framework */; };
@@ -17,10 +19,25 @@
 		23BE75A0180878ED00CD1724 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23BE759F180878ED00CD1724 /* Default@2x.png */; };
 		23BE75A2180878ED00CD1724 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23BE75A1180878ED00CD1724 /* Default-568h@2x.png */; };
 		23BE75A5180878ED00CD1724 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BE75A3180878ED00CD1724 /* MainStoryboard.storyboard */; };
-		23BE75A8180878ED00CD1724 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BE75A7180878ED00CD1724 /* ViewController.m */; };
+		23BE75B118087C3700CD1724 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BE75B018087C3700CD1724 /* LoginView.m */; };
+		23BE75B61808827000CD1724 /* UIImage+uicolor.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BE75B51808827000CD1724 /* UIImage+uicolor.m */; };
+		23BE75BA1808832700CD1724 /* YQkeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BE75B91808832700CD1724 /* YQkeychain.m */; };
+		23F3399B1808A3E500AE1A4F /* GitHttpEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3399A1808A3E500AE1A4F /* GitHttpEngine.m */; };
+		23F3399E1808A60200AE1A4F /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3399D1808A60200AE1A4F /* Authorization.m */; };
+		23F339A11808A7EC00AE1A4F /* GitConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339A01808A7EC00AE1A4F /* GitConstants.m */; };
+		23F339A31808AB2E00AE1A4F /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F339A21808AB2E00AE1A4F /* AppConfig.plist */; };
+		23F339A61808AB8500AE1A4F /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339A51808AB8500AE1A4F /* AppConfig.m */; };
+		23F339B01808B6DB00AE1A4F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339AF1808B6DB00AE1A4F /* HomeViewController.m */; };
+		23F339B31808B9FE00AE1A4F /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339B21808B9FE00AE1A4F /* MenuViewController.m */; };
+		23F339B61808C1D700AE1A4F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339B51808C1D700AE1A4F /* LoginViewController.m */; };
+		B775689AB317443F95D93A84 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE21F29F3BB54D128C3B8BD0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		237709611808F88A004B28E8 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuCell.h; path = Classes/Views/MenuCell.h; sourceTree = "<group>"; };
+		237709621808F88A004B28E8 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuCell.m; path = Classes/Views/MenuCell.m; sourceTree = "<group>"; };
+		237709641808FA8D004B28E8 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "Classes/Addtion/NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		237709651808FA8D004B28E8 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "Classes/Addtion/NSString+FontAwesome.m"; sourceTree = "<group>"; };
 		23BE7588180878EC00CD1724 /* GitCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BE758B180878EC00CD1724 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23BE758D180878ED00CD1724 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,8 +52,29 @@
 		23BE759F180878ED00CD1724 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		23BE75A1180878ED00CD1724 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		23BE75A4180878ED00CD1724 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		23BE75A6180878ED00CD1724 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		23BE75A7180878ED00CD1724 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		23BE75AF18087C3700CD1724 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Classes/Views/LoginView.h; sourceTree = "<group>"; };
+		23BE75B018087C3700CD1724 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = Classes/Views/LoginView.m; sourceTree = "<group>"; };
+		23BE75B41808827000CD1724 /* UIImage+uicolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+uicolor.h"; path = "Classes/Addtion/UIImage+uicolor.h"; sourceTree = "<group>"; };
+		23BE75B51808827000CD1724 /* UIImage+uicolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+uicolor.m"; path = "Classes/Addtion/UIImage+uicolor.m"; sourceTree = "<group>"; };
+		23BE75B81808832700CD1724 /* YQkeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YQkeychain.h; path = Classes/Models/YQkeychain.h; sourceTree = "<group>"; };
+		23BE75B91808832700CD1724 /* YQkeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YQkeychain.m; path = Classes/Models/YQkeychain.m; sourceTree = "<group>"; };
+		23F339991808A3E500AE1A4F /* GitHttpEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitHttpEngine.h; path = Classes/GitHttpEngine.h; sourceTree = "<group>"; };
+		23F3399A1808A3E500AE1A4F /* GitHttpEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GitHttpEngine.m; path = Classes/GitHttpEngine.m; sourceTree = "<group>"; };
+		23F3399C1808A60200AE1A4F /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Authorization.h; path = Classes/Models/Authorization.h; sourceTree = "<group>"; };
+		23F3399D1808A60200AE1A4F /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Authorization.m; path = Classes/Models/Authorization.m; sourceTree = "<group>"; };
+		23F3399F1808A7EC00AE1A4F /* GitConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitConstants.h; path = Classes/GitConstants.h; sourceTree = "<group>"; };
+		23F339A01808A7EC00AE1A4F /* GitConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GitConstants.m; path = Classes/GitConstants.m; sourceTree = "<group>"; };
+		23F339A21808AB2E00AE1A4F /* AppConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfig.plist; sourceTree = "<group>"; };
+		23F339A41808AB8500AE1A4F /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConfig.h; path = Classes/Models/AppConfig.h; sourceTree = "<group>"; };
+		23F339A51808AB8500AE1A4F /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConfig.m; path = Classes/Models/AppConfig.m; sourceTree = "<group>"; };
+		23F339AE1808B6DB00AE1A4F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Classes/ViewControllers/HomeViewController.h; sourceTree = "<group>"; };
+		23F339AF1808B6DB00AE1A4F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Classes/ViewControllers/HomeViewController.m; sourceTree = "<group>"; };
+		23F339B11808B9FE00AE1A4F /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/ViewControllers/MenuViewController.h; sourceTree = "<group>"; };
+		23F339B21808B9FE00AE1A4F /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/ViewControllers/MenuViewController.m; sourceTree = "<group>"; };
+		23F339B41808C1D700AE1A4F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
+		23F339B51808C1D700AE1A4F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/ViewControllers/LoginViewController.m; sourceTree = "<group>"; };
+		32238FBC5C064D35AB0AB161 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DE21F29F3BB54D128C3B8BD0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +85,7 @@
 				23BE758C180878ED00CD1724 /* UIKit.framework in Frameworks */,
 				23BE758E180878ED00CD1724 /* Foundation.framework in Frameworks */,
 				23BE7590180878ED00CD1724 /* CoreGraphics.framework in Frameworks */,
+				B775689AB317443F95D93A84 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +98,7 @@
 				23BE7591180878ED00CD1724 /* GitCat */,
 				23BE758A180878EC00CD1724 /* Frameworks */,
 				23BE7589180878EC00CD1724 /* Products */,
+				32238FBC5C064D35AB0AB161 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +116,7 @@
 				23BE758B180878EC00CD1724 /* UIKit.framework */,
 				23BE758D180878ED00CD1724 /* Foundation.framework */,
 				23BE758F180878ED00CD1724 /* CoreGraphics.framework */,
+				DE21F29F3BB54D128C3B8BD0 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,11 +124,10 @@
 		23BE7591180878ED00CD1724 /* GitCat */ = {
 			isa = PBXGroup;
 			children = (
+				23BE75AE18087BFD00CD1724 /* Classes */,
 				23BE759A180878ED00CD1724 /* AppDelegate.h */,
 				23BE759B180878ED00CD1724 /* AppDelegate.m */,
 				23BE75A3180878ED00CD1724 /* MainStoryboard.storyboard */,
-				23BE75A6180878ED00CD1724 /* ViewController.h */,
-				23BE75A7180878ED00CD1724 /* ViewController.m */,
 				23BE7592180878ED00CD1724 /* Supporting Files */,
 			);
 			path = GitCat;
@@ -103,8 +143,80 @@
 				23BE759D180878ED00CD1724 /* Default.png */,
 				23BE759F180878ED00CD1724 /* Default@2x.png */,
 				23BE75A1180878ED00CD1724 /* Default-568h@2x.png */,
+				23F339A21808AB2E00AE1A4F /* AppConfig.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23BE75AE18087BFD00CD1724 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				23F339A71808B59000AE1A4F /* ViewControllers */,
+				23F339981808A3C100AE1A4F /* Helper */,
+				23BE75B7180882DE00CD1724 /* Models */,
+				23BE75B31808824A00CD1724 /* Addtion */,
+				23BE75B21808824100CD1724 /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		23BE75B21808824100CD1724 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23BE75AF18087C3700CD1724 /* LoginView.h */,
+				23BE75B018087C3700CD1724 /* LoginView.m */,
+				237709611808F88A004B28E8 /* MenuCell.h */,
+				237709621808F88A004B28E8 /* MenuCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		23BE75B31808824A00CD1724 /* Addtion */ = {
+			isa = PBXGroup;
+			children = (
+				237709641808FA8D004B28E8 /* NSString+FontAwesome.h */,
+				237709651808FA8D004B28E8 /* NSString+FontAwesome.m */,
+				23BE75B41808827000CD1724 /* UIImage+uicolor.h */,
+				23BE75B51808827000CD1724 /* UIImage+uicolor.m */,
+			);
+			name = Addtion;
+			sourceTree = "<group>";
+		};
+		23BE75B7180882DE00CD1724 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23BE75B81808832700CD1724 /* YQkeychain.h */,
+				23BE75B91808832700CD1724 /* YQkeychain.m */,
+				23F3399C1808A60200AE1A4F /* Authorization.h */,
+				23F3399D1808A60200AE1A4F /* Authorization.m */,
+				23F339A41808AB8500AE1A4F /* AppConfig.h */,
+				23F339A51808AB8500AE1A4F /* AppConfig.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		23F339981808A3C100AE1A4F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				23F339991808A3E500AE1A4F /* GitHttpEngine.h */,
+				23F3399A1808A3E500AE1A4F /* GitHttpEngine.m */,
+				23F3399F1808A7EC00AE1A4F /* GitConstants.h */,
+				23F339A01808A7EC00AE1A4F /* GitConstants.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		23F339A71808B59000AE1A4F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23F339AE1808B6DB00AE1A4F /* HomeViewController.h */,
+				23F339AF1808B6DB00AE1A4F /* HomeViewController.m */,
+				23F339B11808B9FE00AE1A4F /* MenuViewController.h */,
+				23F339B21808B9FE00AE1A4F /* MenuViewController.m */,
+				23F339B41808C1D700AE1A4F /* LoginViewController.h */,
+				23F339B51808C1D700AE1A4F /* LoginViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23BE75AB180878ED00CD1724 /* Build configuration list for PBXNativeTarget "GitCat" */;
 			buildPhases = (
+				D21C5A01665446A8ABBCD94F /* Check Pods Manifest.lock */,
 				23BE7584180878EC00CD1724 /* Sources */,
 				23BE7585180878EC00CD1724 /* Frameworks */,
 				23BE7586180878EC00CD1724 /* Resources */,
+				00E1C56271DF488297DD392B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,10 +277,44 @@
 				23BE75A0180878ED00CD1724 /* Default@2x.png in Resources */,
 				23BE75A2180878ED00CD1724 /* Default-568h@2x.png in Resources */,
 				23BE75A5180878ED00CD1724 /* MainStoryboard.storyboard in Resources */,
+				23F339A31808AB2E00AE1A4F /* AppConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00E1C56271DF488297DD392B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D21C5A01665446A8ABBCD94F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23BE7584180878EC00CD1724 /* Sources */ = {
@@ -175,7 +323,18 @@
 			files = (
 				23BE7598180878ED00CD1724 /* main.m in Sources */,
 				23BE759C180878ED00CD1724 /* AppDelegate.m in Sources */,
-				23BE75A8180878ED00CD1724 /* ViewController.m in Sources */,
+				23BE75B118087C3700CD1724 /* LoginView.m in Sources */,
+				23BE75B61808827000CD1724 /* UIImage+uicolor.m in Sources */,
+				23BE75BA1808832700CD1724 /* YQkeychain.m in Sources */,
+				23F3399B1808A3E500AE1A4F /* GitHttpEngine.m in Sources */,
+				23F3399E1808A60200AE1A4F /* Authorization.m in Sources */,
+				23F339A11808A7EC00AE1A4F /* GitConstants.m in Sources */,
+				23F339A61808AB8500AE1A4F /* AppConfig.m in Sources */,
+				23F339B01808B6DB00AE1A4F /* HomeViewController.m in Sources */,
+				23F339B31808B9FE00AE1A4F /* MenuViewController.m in Sources */,
+				23F339B61808C1D700AE1A4F /* LoginViewController.m in Sources */,
+				237709631808F88A004B28E8 /* MenuCell.m in Sources */,
+				237709661808FA8D004B28E8 /* NSString+FontAwesome.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +420,7 @@
 		};
 		23BE75AC180878ED00CD1724 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32238FBC5C064D35AB0AB161 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitCat/GitCat-Prefix.pch";
@@ -272,6 +432,7 @@
 		};
 		23BE75AD180878ED00CD1724 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32238FBC5C064D35AB0AB161 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitCat/GitCat-Prefix.pch";
@@ -300,6 +461,7 @@
 				23BE75AD180878ED00CD1724 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
