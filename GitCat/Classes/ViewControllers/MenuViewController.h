@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MenuDelegate <NSObject>
+
+-(void)clickItemAtIndex:(NSInteger)index;
+
+@end
+
 @interface MenuViewController : UITableViewController
+
+@property (weak) id<MenuDelegate> delegate;
+
 
 @end

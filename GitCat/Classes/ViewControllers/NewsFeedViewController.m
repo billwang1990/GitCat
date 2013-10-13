@@ -6,13 +6,13 @@
 //  Copyright (c) 2013年 billwang. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "NewsFeedViewController.h"
 
-@interface HomeViewController ()
+@interface NewsFeedViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation NewsFeedViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.title = @"News Feed";
 }
 
 - (void)didReceiveMemoryWarning

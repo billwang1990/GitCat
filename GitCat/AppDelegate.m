@@ -8,40 +8,48 @@
 
 #import "AppDelegate.h"
 #import "MenuViewController.h"
-#import "HomeViewController.h"
+#import "ProfileViewController.h"
+#import "NewsFeedViewController.h"
 #import "LoginViewController.h"
 #import <MMDrawerController.h>
 #import <SSKeychain.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<MenuDelegate>
 
 @property (nonatomic) MMDrawerController *viewController;
 @property (nonatomic) LoginViewController *LoginVC;
+@property (nonatomic) MenuViewController *menuVC;
+@property (nonatomic) UINavigationController *ProfileNav;
+@property (nonatomic) UINavigationController *NewsFeedNav;
+@property (nonatomic) UIStoryboard *storyboard;
+
+//包含所有的子菜单控制器
+@property (nonatomic) NSMutableArray *viewControllers;
 
 @end
 
 @implementation AppDelegate
 
+#pragma mark MenuDelegate
+-(void)clickItemAtIndex:(NSInteger)index
+{
+    [self.viewController setCenterViewController:[self.viewControllers objectAtIndex:index] withCloseAnimation:YES completion:nil];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+#ifdef DEBUG
     [SSKeychain deletePasswordForService:@"access_token" account:@"gitos"];
+#endif
+   
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     if (![self readAccessTokenFromKeyChain]) {
         //should login
-        self.LoginVC = [[LoginViewController alloc]init];
-        
-        __weak AppDelegate *weakSelf = self;
-        
-        [self.LoginVC setCompleteBlock:^{
-            
-            [weakSelf loadViewController];
-        }];
-        
-        self.window.rootViewController = self.LoginVC;
-        [self.window makeKeyAndVisible];
+        [self addLoginViewController];
     }
     else
     {
@@ -78,15 +86,30 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)addLoginViewController
+{
+    self.LoginVC = [[LoginViewController alloc]init];
+    
+    __weak AppDelegate *weakSelf = self;
+    
+    [self.LoginVC setCompleteBlock:^{
+        
+        [weakSelf loadViewController];
+    }];
+    
+    self.window.rootViewController = self.LoginVC;
+    [self.window makeKeyAndVisible];
+    
+}
+
 -(void)loadViewController
 {
-    UIStoryboard *storyboard = MainStoryBoard;
+    self.storyboard = MainStoryBoard;
+ 
+    self.menuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
+    self.menuVC.delegate = self;
     
-    UINavigationController *homeNav = [storyboard instantiateViewControllerWithIdentifier:@"HomeNav"];
-    
-    MenuViewController   *menu = [storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
-    
-    self.viewController = [[MMDrawerController alloc]initWithCenterViewController:homeNav leftDrawerViewController:menu];
+    self.viewController = [[MMDrawerController alloc]initWithCenterViewController:self.ProfileNav leftDrawerViewController:self.menuVC];
     
     [self.viewController setMaximumRightDrawerWidth:200.0];
     [self.viewController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
@@ -95,7 +118,6 @@
     //change the default rootviewcontroller;
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-
 }
 
 
@@ -110,5 +132,43 @@
     }
     return YES;
 }
+
+//lazy loading
+-(UINavigationController *)NewsFeedNav{
+    if (!_NewsFeedNav) {
+        NewsFeedViewController *newsFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"NewsFeedViewController"];
+        _NewsFeedNav = [[UINavigationController alloc]initWithRootViewController:newsFeed];
+    }
+    
+    return _NewsFeedNav;
+}
+
+-(UINavigationController *)ProfileNav
+{
+    if (!_ProfileNav) {
+        ProfileViewController *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+        
+        _ProfileNav = [[UINavigationController alloc]initWithRootViewController:profile];
+    }
+    
+    return _ProfileNav;
+}
+
+
+-(NSMutableArray *)viewControllers
+{
+    if (!_viewControllers) {
+        _viewControllers = [[NSMutableArray alloc]initWithCapacity:10];
+        
+        //profile
+        [_viewControllers addObject:self.ProfileNav];
+        
+        //news feed v
+        [_viewControllers addObject:self.NewsFeedNav];
+        
+    }
+    return _viewControllers;
+}
+
 
 @end

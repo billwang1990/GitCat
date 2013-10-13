@@ -33,7 +33,8 @@
 	// Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.loginView = [[LoginView alloc]initWithFrame:self.view.frame];
+    
+    self.loginView = [[LoginView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.loginView.delegate = self;
     
     [self.view addSubview:self.loginView];

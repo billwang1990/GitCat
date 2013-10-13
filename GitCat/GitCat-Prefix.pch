@@ -15,6 +15,7 @@
     #import <MobileCoreServices/MobileCoreServices.h>
 #endif
 
+#import "NotificationDefine.h"
 #import "GitConstants.h"
 
 #ifdef DEBUG

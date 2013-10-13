@@ -7,6 +7,10 @@
 //
 
 #import "MenuViewController.h"
+#import "MenuCell.h"
+
+
+#define TableHeader_H 30
 
 @interface MenuViewController ()
 
@@ -32,6 +36,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,14 +45,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark uitableview delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 25;
+    return TableHeader_H;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return TableHeader_H + 15;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 1, 300, 25)];
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 1, 300, TableHeader_H)];
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.text = [self tableView:tableView titleForHeaderInSection:section];
     
@@ -56,9 +66,9 @@
                                              blue:179/255.0
                                             alpha:1.0];
     
-    headerLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:12.0];
+    headerLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:14.0];
     
-    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 25)];
+    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, TableHeader_H)];
     
     backgroundView.backgroundColor = [UIColor colorWithRed:49/255.0
                                                      green:49/255.0
@@ -67,6 +77,16 @@
     [backgroundView addSubview:headerLabel];
     
     return backgroundView;
+}
+
+-(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [UIView new];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -108,7 +128,44 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    if (indexPath.section == 0 && indexPath.row == 0)
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profile"];
+        if (!cell) {
+            cell  = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"profile"];
+            
+            cell.textLabel.text = @"profile";
+            return cell;
+        }
+    }
+    else if(indexPath.section == 1)
+    {
+        MenuCell *cell = (MenuCell*)[tableView dequeueReusableCellWithIdentifier:@"MenuCell"];
+        cell.description.text = @"NewsFeed";
+    
+        return cell;
+    }
+    
+    return nil;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(clickItemAtIndex:)]) {
+        if (indexPath.section == 0) {
+            [self.delegate clickItemAtIndex:0];
+        }
+        else if(indexPath.section == 1)
+        {
+            [self.delegate clickItemAtIndex:1];
+        }
+    }
+}
+
 
 @end
