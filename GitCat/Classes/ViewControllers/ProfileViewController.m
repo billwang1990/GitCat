@@ -11,6 +11,9 @@
 #import <MBProgressHUD.h>
 
 @interface ProfileViewController ()<UIAlertViewDelegate>
+
+@property (nonatomic) MBProgressHUD *loadHud;
+
 @end
 
 @implementation ProfileViewController
@@ -33,9 +36,11 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleAccessTokenSuccess:) name:ACCESSTOKEN_SUCCESS object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleAccessTokenFailed) name:ACCESSTOKEN_FAILED object:nil];
+
+    self.title = @"Profile";
     
-    [self handleAccessTokenFailed];
-    
+    [self.loadHud show:YES];
+    [UserManager fetchUserInfoWithToken:[AccountDAO getAccessToken]];
 }
 
 -(void)dealloc
@@ -49,14 +54,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(MBProgressHUD *)loadHud
+{
+    if (!_loadHud) {
+        _loadHud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        _loadHud.mode = MBProgressHUDAnimationFade;
+        _loadHud.labelText = LOADING_MESSAGE;
+    }
+    return  _loadHud;
+}
+
 #pragma mark Handle AccessToken notification
 -(void)handleAccessTokenSuccess:(NSNotification*)userInfo
 {
+    [self.loadHud hide:YES];
+    
+    User *user = (User*)userInfo.object;
+    [UserManager setUserSingleton:user];
+    
+    NSString *account = [AppConfig getConfigValue:@"KeychainAccountName"];
+    [SSKeychain setPassword:[user getLogin] forService:@"username" account:account];
     
 }
 
 -(void)handleAccessTokenFailed
 {
+    [self.loadHud hide:YES];
+    
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"认证失败" message:@"登录失败，需要重新登录Github！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     
     [alert show];

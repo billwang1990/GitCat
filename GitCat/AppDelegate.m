@@ -87,7 +87,7 @@
 }
 
 -(void)addLoginViewController
-{
+{    
     self.LoginVC = [[LoginViewController alloc]init];
     
     __weak AppDelegate *weakSelf = self;

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		237709631808F88A004B28E8 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709621808F88A004B28E8 /* MenuCell.m */; };
 		237709661808FA8D004B28E8 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709651808FA8D004B28E8 /* NSString+FontAwesome.m */; };
+		23AB12AD180A60D200AB5AE0 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12AC180A60D200AB5AE0 /* UserManager.m */; };
+		23AB12B0180A61EC00AB5AE0 /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12AF180A61EC00AB5AE0 /* AccountDAO.m */; };
+		23AB12B6180A65B500AB5AE0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12B5180A65B500AB5AE0 /* User.m */; };
 		23BE758C180878ED00CD1724 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BE758B180878EC00CD1724 /* UIKit.framework */; };
 		23BE758E180878ED00CD1724 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BE758D180878ED00CD1724 /* Foundation.framework */; };
 		23BE7590180878ED00CD1724 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BE758F180878ED00CD1724 /* CoreGraphics.framework */; };
@@ -38,6 +41,12 @@
 		237709621808F88A004B28E8 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuCell.m; path = Classes/Views/MenuCell.m; sourceTree = "<group>"; };
 		237709641808FA8D004B28E8 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "Classes/Addtion/NSString+FontAwesome.h"; sourceTree = "<group>"; };
 		237709651808FA8D004B28E8 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "Classes/Addtion/NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		23AB12AB180A60D200AB5AE0 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Classes/UserManager.h; sourceTree = "<group>"; };
+		23AB12AC180A60D200AB5AE0 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Classes/UserManager.m; sourceTree = "<group>"; };
+		23AB12AE180A61EC00AB5AE0 /* AccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountDAO.h; path = Classes/AccountDAO.h; sourceTree = "<group>"; };
+		23AB12AF180A61EC00AB5AE0 /* AccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountDAO.m; path = Classes/AccountDAO.m; sourceTree = "<group>"; };
+		23AB12B4180A65B500AB5AE0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Classes/Models/User.h; sourceTree = "<group>"; };
+		23AB12B5180A65B500AB5AE0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Classes/Models/User.m; sourceTree = "<group>"; };
 		23BE7588180878EC00CD1724 /* GitCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BE758B180878EC00CD1724 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23BE758D180878ED00CD1724 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -193,6 +202,8 @@
 				23F3399D1808A60200AE1A4F /* Authorization.m */,
 				23F339A41808AB8500AE1A4F /* AppConfig.h */,
 				23F339A51808AB8500AE1A4F /* AppConfig.m */,
+				23AB12B4180A65B500AB5AE0 /* User.h */,
+				23AB12B5180A65B500AB5AE0 /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,6 +213,10 @@
 			children = (
 				23F3399F1808A7EC00AE1A4F /* GitConstants.h */,
 				23F339A01808A7EC00AE1A4F /* GitConstants.m */,
+				23AB12AB180A60D200AB5AE0 /* UserManager.h */,
+				23AB12AC180A60D200AB5AE0 /* UserManager.m */,
+				23AB12AE180A61EC00AB5AE0 /* AccountDAO.h */,
+				23AB12AF180A61EC00AB5AE0 /* AccountDAO.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -337,6 +352,9 @@
 				237709631808F88A004B28E8 /* MenuCell.m in Sources */,
 				237709661808FA8D004B28E8 /* NSString+FontAwesome.m in Sources */,
 				23D626031809BB4C0095E0A7 /* ProfileViewController.m in Sources */,
+				23AB12AD180A60D200AB5AE0 /* UserManager.m in Sources */,
+				23AB12B0180A61EC00AB5AE0 /* AccountDAO.m in Sources */,
+				23AB12B6180A65B500AB5AE0 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
