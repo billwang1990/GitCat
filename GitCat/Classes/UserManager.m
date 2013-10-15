@@ -13,7 +13,7 @@ static User *userSingleton = nil;
 @implementation UserManager
 
 +(void)setUserSingleton:(User *)user{
-    userSingleton = user;
+    userSingleton = [[User alloc]initWithData:user.data];
 }
 
 +(User *)shareUserSingleton

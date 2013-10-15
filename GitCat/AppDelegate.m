@@ -10,11 +10,12 @@
 #import "MenuViewController.h"
 #import "ProfileViewController.h"
 #import "NewsFeedViewController.h"
+#import "LoadingViewController.h"
 #import "LoginViewController.h"
 #import <MMDrawerController.h>
 #import <SSKeychain.h>
 
-@interface AppDelegate ()<MenuDelegate>
+@interface AppDelegate ()<MenuDelegate, LoadingViewcontrollerDelegate>
 
 @property (nonatomic) MMDrawerController *viewController;
 @property (nonatomic) LoginViewController *LoginVC;
@@ -40,10 +41,9 @@
 {
     // Override point for customization after application launch.
     
-#ifdef DEBUG
-    [SSKeychain deletePasswordForService:@"access_token" account:@"gitos"];
-#endif
-   
+//#ifdef DEBUG
+//    [SSKeychain deletePasswordForService:@"access_token" account:@"gitos"];
+//#endif
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -53,8 +53,10 @@
     }
     else
     {
-        [self loadViewController];
+        [self startLoading];
     }
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -94,7 +96,7 @@
     
     [self.LoginVC setCompleteBlock:^{
         
-        [weakSelf loadViewController];
+        [weakSelf startLoading];
     }];
     
     self.window.rootViewController = self.LoginVC;
@@ -117,9 +119,14 @@
     
     //change the default rootviewcontroller;
     self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
 }
 
+-(void)startLoading
+{
+    LoadingViewController *loadingController = [[LoadingViewController alloc] init];
+    loadingController.delegate = self;
+    self.window.rootViewController = loadingController;
+}
 
 -(BOOL)readAccessTokenFromKeyChain
 {
@@ -147,7 +154,7 @@
 {
     if (!_ProfileNav) {
         ProfileViewController *profile = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
-        
+        profile.user = [UserManager shareUserSingleton];
         _ProfileNav = [[UINavigationController alloc]initWithRootViewController:profile];
     }
     
@@ -163,11 +170,17 @@
         //profile
         [_viewControllers addObject:self.ProfileNav];
         
-        //news feed v
+        //news feed 
         [_viewControllers addObject:self.NewsFeedNav];
         
     }
     return _viewControllers;
+}
+
+#pragma mark loadingViewController Delegate
+-(void)loadingDataSuccess
+{
+    [self loadViewController];
 }
 
 

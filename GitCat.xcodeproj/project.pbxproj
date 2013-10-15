@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231B6CD7180D066000F3AF34 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B6CD6180D066000F3AF34 /* LoadingViewController.m */; };
 		237709631808F88A004B28E8 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709621808F88A004B28E8 /* MenuCell.m */; };
 		237709661808FA8D004B28E8 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709651808FA8D004B28E8 /* NSString+FontAwesome.m */; };
 		23AB12AD180A60D200AB5AE0 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12AC180A60D200AB5AE0 /* UserManager.m */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		231B6CD5180D066000F3AF34 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = Classes/ViewControllers/LoadingViewController.h; sourceTree = "<group>"; };
+		231B6CD6180D066000F3AF34 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Classes/ViewControllers/LoadingViewController.m; sourceTree = "<group>"; };
 		237709611808F88A004B28E8 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuCell.h; path = Classes/Views/MenuCell.h; sourceTree = "<group>"; };
 		237709621808F88A004B28E8 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuCell.m; path = Classes/Views/MenuCell.m; sourceTree = "<group>"; };
 		237709641808FA8D004B28E8 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "Classes/Addtion/NSString+FontAwesome.h"; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				23F339B51808C1D700AE1A4F /* LoginViewController.m */,
 				23D626011809BB4C0095E0A7 /* ProfileViewController.h */,
 				23D626021809BB4C0095E0A7 /* ProfileViewController.m */,
+				231B6CD5180D066000F3AF34 /* LoadingViewController.h */,
+				231B6CD6180D066000F3AF34 /* LoadingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				23AB12AD180A60D200AB5AE0 /* UserManager.m in Sources */,
 				23AB12B0180A61EC00AB5AE0 /* AccountDAO.m in Sources */,
 				23AB12B6180A65B500AB5AE0 /* User.m in Sources */,
+				231B6CD7180D066000F3AF34 /* LoadingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
