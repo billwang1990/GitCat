@@ -141,8 +141,8 @@
     else if(indexPath.section == 1)
     {
         MenuCell *cell = (MenuCell*)[tableView dequeueReusableCellWithIdentifier:@"MenuCell"];
-        cell.description.text = @"NewsFeed";
-    
+        [cell setupCellwithIndexPath:indexPath];
+        
         return cell;
     }
     

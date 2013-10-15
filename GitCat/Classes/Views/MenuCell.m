@@ -7,6 +7,7 @@
 //
 
 #import "MenuCell.h"
+#import <FontAwesomeKit.h>
 
 @implementation MenuCell
 
@@ -24,6 +25,16 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+-(void)setupCellwithIndexPath:(NSIndexPath *)indexPath
+{
+    self.awesomeIcon.font = [FontAwesomeKit fontWithSize:20];
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        self.awesomeIcon.text  = FAKIconRss;
+        self.description.text = @"News Feed";
+    }
 }
 
 @end

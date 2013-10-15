@@ -14,4 +14,6 @@
 
 @property (nonatomic) User *user;
 
+@property (weak, nonatomic) IBOutlet UITableView *profileTable;
+
 @end

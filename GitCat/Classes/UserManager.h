@@ -21,4 +21,9 @@
 
 +(void)fetchUserInfoWithToken:(NSString*)fetchInfoForUserWithToken;
 
++(void)fetchUserInfo;
+
++(void)fetchNewsFeedForPage:(int)page;
+
+
 @end

@@ -10,8 +10,9 @@
 
 @interface MenuCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *Icon;
+@property (weak, nonatomic) IBOutlet UILabel *awesomeIcon;
 @property (weak, nonatomic) IBOutlet UILabel *description;
 
+-(void)setupCellwithIndexPath:(NSIndexPath*)indexPath;
 
 @end

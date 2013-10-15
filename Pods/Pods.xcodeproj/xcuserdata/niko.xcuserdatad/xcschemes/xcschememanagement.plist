@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FontAwesomeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Harpy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-MMDrawerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C62B8DBD8D5452BAD4144B7</key>
+		<key>1CFD0E27F9C14B8F94880DBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>66A7604615834519AAE05574</key>
+		<key>221BEA1048664A6FAE010795</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6DBF90373C624B2383360D54</key>
+		<key>968EF3F6E8F04558B84E53F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>933797DE507449B68DB1F242</key>
+		<key>9FBF338857EE43DFA8374453</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A2AD0B6604A6439581789C6A</key>
+		<key>A52C858417F5456197A23D75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5F107B606DC4ABFB6F5EFBD</key>
+		<key>B0440E965EEA4907A3AFF4F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4819E379E0445B0963E3EB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F91BBE93FD214070B68AC5E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

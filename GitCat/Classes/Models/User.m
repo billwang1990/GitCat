@@ -7,6 +7,8 @@
 //
 
 #import "User.h"
+#import "NSDate+RelativeDate.h"
+
 
 @implementation User
 
@@ -138,13 +140,11 @@
 
 - (NSString *)getCreatedAt
 {
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZ"];
-//    NSDate *date  = [dateFormatter dateFromString:[data valueForKey:@"created_at"]];
-//    
-//    RelativeDateDescriptor *relativeDateDescriptor = [[RelativeDateDescriptor alloc] initWithPriorDateDescriptionFormat:@"%@ ago" postDateDescriptionFormat:@"in %@"];
-//    
-//    return [relativeDateDescriptor describeDate:date relativeTo:[NSDate date]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZ"];
+    NSDate *date  = [dateFormatter dateFromString:[_data valueForKey:@"created_at"]];
+    
+    return [date relativeDate];
 }
 
 - (NSString *)getHtmlUrl

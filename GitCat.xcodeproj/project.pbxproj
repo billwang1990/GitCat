@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		231B6CD7180D066000F3AF34 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B6CD6180D066000F3AF34 /* LoadingViewController.m */; };
 		237709631808F88A004B28E8 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709621808F88A004B28E8 /* MenuCell.m */; };
-		237709661808FA8D004B28E8 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709651808FA8D004B28E8 /* NSString+FontAwesome.m */; };
 		23AB12AD180A60D200AB5AE0 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12AC180A60D200AB5AE0 /* UserManager.m */; };
 		23AB12B0180A61EC00AB5AE0 /* AccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12AF180A61EC00AB5AE0 /* AccountDAO.m */; };
 		23AB12B6180A65B500AB5AE0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12B5180A65B500AB5AE0 /* User.m */; };
@@ -26,12 +25,14 @@
 		23BE75B118087C3700CD1724 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BE75B018087C3700CD1724 /* LoginView.m */; };
 		23BE75B61808827000CD1724 /* UIImage+uicolor.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BE75B51808827000CD1724 /* UIImage+uicolor.m */; };
 		23BE75BA1808832700CD1724 /* YQkeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BE75B91808832700CD1724 /* YQkeychain.m */; };
+		23C85523180D978100F7520A /* ProfileMetaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C85522180D978100F7520A /* ProfileMetaCell.m */; };
 		23D626031809BB4C0095E0A7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D626021809BB4C0095E0A7 /* ProfileViewController.m */; };
+		23DCF541180DA74C00FABA7D /* NSDate+RelativeDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCF540180DA74C00FABA7D /* NSDate+RelativeDate.m */; };
+		23DCF544180DD2F600FABA7D /* NewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DCF543180DD2F600FABA7D /* NewsFeedViewController.m */; };
 		23F3399E1808A60200AE1A4F /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3399D1808A60200AE1A4F /* Authorization.m */; };
 		23F339A11808A7EC00AE1A4F /* GitConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339A01808A7EC00AE1A4F /* GitConstants.m */; };
 		23F339A31808AB2E00AE1A4F /* AppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F339A21808AB2E00AE1A4F /* AppConfig.plist */; };
 		23F339A61808AB8500AE1A4F /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339A51808AB8500AE1A4F /* AppConfig.m */; };
-		23F339B01808B6DB00AE1A4F /* NewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339AF1808B6DB00AE1A4F /* NewsFeedViewController.m */; };
 		23F339B31808B9FE00AE1A4F /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339B21808B9FE00AE1A4F /* MenuViewController.m */; };
 		23F339B61808C1D700AE1A4F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F339B51808C1D700AE1A4F /* LoginViewController.m */; };
 		B775689AB317443F95D93A84 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE21F29F3BB54D128C3B8BD0 /* libPods.a */; };
@@ -42,8 +43,6 @@
 		231B6CD6180D066000F3AF34 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Classes/ViewControllers/LoadingViewController.m; sourceTree = "<group>"; };
 		237709611808F88A004B28E8 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuCell.h; path = Classes/Views/MenuCell.h; sourceTree = "<group>"; };
 		237709621808F88A004B28E8 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuCell.m; path = Classes/Views/MenuCell.m; sourceTree = "<group>"; };
-		237709641808FA8D004B28E8 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "Classes/Addtion/NSString+FontAwesome.h"; sourceTree = "<group>"; };
-		237709651808FA8D004B28E8 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "Classes/Addtion/NSString+FontAwesome.m"; sourceTree = "<group>"; };
 		23AB12AB180A60D200AB5AE0 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Classes/UserManager.h; sourceTree = "<group>"; };
 		23AB12AC180A60D200AB5AE0 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Classes/UserManager.m; sourceTree = "<group>"; };
 		23AB12AE180A61EC00AB5AE0 /* AccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountDAO.h; path = Classes/AccountDAO.h; sourceTree = "<group>"; };
@@ -70,9 +69,15 @@
 		23BE75B51808827000CD1724 /* UIImage+uicolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+uicolor.m"; path = "Classes/Addtion/UIImage+uicolor.m"; sourceTree = "<group>"; };
 		23BE75B81808832700CD1724 /* YQkeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YQkeychain.h; path = Classes/Models/YQkeychain.h; sourceTree = "<group>"; };
 		23BE75B91808832700CD1724 /* YQkeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YQkeychain.m; path = Classes/Models/YQkeychain.m; sourceTree = "<group>"; };
+		23C85521180D978100F7520A /* ProfileMetaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileMetaCell.h; path = Classes/Views/ProfileMetaCell.h; sourceTree = "<group>"; };
+		23C85522180D978100F7520A /* ProfileMetaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileMetaCell.m; path = Classes/Views/ProfileMetaCell.m; sourceTree = "<group>"; };
 		23D626011809BB4C0095E0A7 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = Classes/ViewControllers/ProfileViewController.h; sourceTree = "<group>"; };
 		23D626021809BB4C0095E0A7 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = Classes/ViewControllers/ProfileViewController.m; sourceTree = "<group>"; };
 		23D62604180A59DF0095E0A7 /* NotificationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationDefine.h; sourceTree = "<group>"; };
+		23DCF53F180DA74C00FABA7D /* NSDate+RelativeDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+RelativeDate.h"; path = "Classes/Addtion/NSDate+RelativeDate.h"; sourceTree = "<group>"; };
+		23DCF540180DA74C00FABA7D /* NSDate+RelativeDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+RelativeDate.m"; path = "Classes/Addtion/NSDate+RelativeDate.m"; sourceTree = "<group>"; };
+		23DCF542180DD2F600FABA7D /* NewsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsFeedViewController.h; path = Classes/ViewControllers/NewsFeedViewController.h; sourceTree = "<group>"; };
+		23DCF543180DD2F600FABA7D /* NewsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsFeedViewController.m; path = Classes/ViewControllers/NewsFeedViewController.m; sourceTree = "<group>"; };
 		23F3399C1808A60200AE1A4F /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Authorization.h; path = Classes/Models/Authorization.h; sourceTree = "<group>"; };
 		23F3399D1808A60200AE1A4F /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Authorization.m; path = Classes/Models/Authorization.m; sourceTree = "<group>"; };
 		23F3399F1808A7EC00AE1A4F /* GitConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitConstants.h; path = Classes/GitConstants.h; sourceTree = "<group>"; };
@@ -80,8 +85,6 @@
 		23F339A21808AB2E00AE1A4F /* AppConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfig.plist; sourceTree = "<group>"; };
 		23F339A41808AB8500AE1A4F /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConfig.h; path = Classes/Models/AppConfig.h; sourceTree = "<group>"; };
 		23F339A51808AB8500AE1A4F /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppConfig.m; path = Classes/Models/AppConfig.m; sourceTree = "<group>"; };
-		23F339AE1808B6DB00AE1A4F /* NewsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsFeedViewController.h; path = Classes/ViewControllers/NewsFeedViewController.h; sourceTree = "<group>"; };
-		23F339AF1808B6DB00AE1A4F /* NewsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsFeedViewController.m; path = Classes/ViewControllers/NewsFeedViewController.m; sourceTree = "<group>"; };
 		23F339B11808B9FE00AE1A4F /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Classes/ViewControllers/MenuViewController.h; sourceTree = "<group>"; };
 		23F339B21808B9FE00AE1A4F /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Classes/ViewControllers/MenuViewController.m; sourceTree = "<group>"; };
 		23F339B41808C1D700AE1A4F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/ViewControllers/LoginViewController.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				23BE75B018087C3700CD1724 /* LoginView.m */,
 				237709611808F88A004B28E8 /* MenuCell.h */,
 				237709621808F88A004B28E8 /* MenuCell.m */,
+				23C85521180D978100F7520A /* ProfileMetaCell.h */,
+				23C85522180D978100F7520A /* ProfileMetaCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -188,8 +193,8 @@
 		23BE75B31808824A00CD1724 /* Addtion */ = {
 			isa = PBXGroup;
 			children = (
-				237709641808FA8D004B28E8 /* NSString+FontAwesome.h */,
-				237709651808FA8D004B28E8 /* NSString+FontAwesome.m */,
+				23DCF53F180DA74C00FABA7D /* NSDate+RelativeDate.h */,
+				23DCF540180DA74C00FABA7D /* NSDate+RelativeDate.m */,
 				23BE75B41808827000CD1724 /* UIImage+uicolor.h */,
 				23BE75B51808827000CD1724 /* UIImage+uicolor.m */,
 			);
@@ -227,8 +232,6 @@
 		23F339A71808B59000AE1A4F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				23F339AE1808B6DB00AE1A4F /* NewsFeedViewController.h */,
-				23F339AF1808B6DB00AE1A4F /* NewsFeedViewController.m */,
 				23F339B11808B9FE00AE1A4F /* MenuViewController.h */,
 				23F339B21808B9FE00AE1A4F /* MenuViewController.m */,
 				23F339B41808C1D700AE1A4F /* LoginViewController.h */,
@@ -237,6 +240,8 @@
 				23D626021809BB4C0095E0A7 /* ProfileViewController.m */,
 				231B6CD5180D066000F3AF34 /* LoadingViewController.h */,
 				231B6CD6180D066000F3AF34 /* LoadingViewController.m */,
+				23DCF542180DD2F600FABA7D /* NewsFeedViewController.h */,
+				23DCF543180DD2F600FABA7D /* NewsFeedViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -351,16 +356,17 @@
 				23F3399E1808A60200AE1A4F /* Authorization.m in Sources */,
 				23F339A11808A7EC00AE1A4F /* GitConstants.m in Sources */,
 				23F339A61808AB8500AE1A4F /* AppConfig.m in Sources */,
-				23F339B01808B6DB00AE1A4F /* NewsFeedViewController.m in Sources */,
 				23F339B31808B9FE00AE1A4F /* MenuViewController.m in Sources */,
 				23F339B61808C1D700AE1A4F /* LoginViewController.m in Sources */,
 				237709631808F88A004B28E8 /* MenuCell.m in Sources */,
-				237709661808FA8D004B28E8 /* NSString+FontAwesome.m in Sources */,
 				23D626031809BB4C0095E0A7 /* ProfileViewController.m in Sources */,
 				23AB12AD180A60D200AB5AE0 /* UserManager.m in Sources */,
 				23AB12B0180A61EC00AB5AE0 /* AccountDAO.m in Sources */,
 				23AB12B6180A65B500AB5AE0 /* User.m in Sources */,
 				231B6CD7180D066000F3AF34 /* LoadingViewController.m in Sources */,
+				23C85523180D978100F7520A /* ProfileMetaCell.m in Sources */,
+				23DCF541180DA74C00FABA7D /* NSDate+RelativeDate.m in Sources */,
+				23DCF544180DD2F600FABA7D /* NewsFeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

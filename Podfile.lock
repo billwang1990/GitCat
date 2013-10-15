@@ -1,5 +1,6 @@
 PODS:
   - AFNetworking (1.3.3)
+  - FontAwesomeKit (1.1.4)
   - Harpy (2.3.6)
   - MBProgressHUD (0.6)
   - MMDrawerController (0.3.0):
@@ -11,20 +12,27 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/MMDrawerVisualStates (0.3.0):
     - MMDrawerController/Core
+  - SDWebImage (3.5):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.5)
   - SSKeychain (1.2.1)
 
 DEPENDENCIES:
   - AFNetworking (= 1.3.3)
+  - FontAwesomeKit (~> 1.1.4)
   - Harpy (~> 2.3.6)
   - MBProgressHUD (= 0.6)
   - MMDrawerController (= 0.3.0)
+  - SDWebImage
   - SSKeychain (~> 1.2.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 0700ec7a58c36ad217173e167f6e4df7270df66b
+  FontAwesomeKit: 5898a51ceadcdb05d72b04991ecf04469332b20c
   Harpy: c582c80576cea0d87e979721047e2398664b6ab0
   MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
   MMDrawerController: 12b1c4954264f0710766a95ed55b3713987d7967
+  SDWebImage: f1a72472f8a2d54445f1fedafe2090593d9caf7f
   SSKeychain: d18926838c2e7cd342e2a49e9f869858e49f035a
 
 COCOAPODS: 0.26.2
