@@ -38,4 +38,11 @@
 - (NSString *)getCreatedAt;
 - (NSString *)getHtmlUrl;
 
+
++(void)fetchUserInfoWithToken:(NSString*)token;
+
+-(void)fetchUserInfo;
+
+-(void)fetchNewsFeedForPage:(int)page;
+
 @end

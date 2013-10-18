@@ -17,4 +17,6 @@
 + (NSString *)getAccountUsername;
 + (NSString *)getDateFormat;
 
++ (NSURL *)prepUrlForApiCall:(NSString *)endpoint;
+
 @end

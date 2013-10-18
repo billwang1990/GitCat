@@ -101,7 +101,6 @@
     
     self.window.rootViewController = self.LoginVC;
     [self.window makeKeyAndVisible];
-    
 }
 
 -(void)loadViewController
@@ -160,7 +159,6 @@
     
     return _ProfileNav;
 }
-
 
 -(NSMutableArray *)viewControllers
 {

@@ -38,6 +38,8 @@
     
     self.title = @"Profile";
     
+    [self registerEvents];
+    
     [self requestUserInfo];
 
 }
@@ -56,7 +58,7 @@
 -(void)requestUserInfo
 {
     [self.loadHud show:YES];
-    [UserManager fetchUserInfo];
+    [[UserManager shareUserSingleton] fetchUserInfo];
 }
 
 -(MBProgressHUD *)loadHud

@@ -11,7 +11,7 @@
 
 #define ACCESSTOKEN_SUCCESS @"ACCESSTOKEN_SUCCESS"
 #define ACCESSTOKEN_FAILED  @"ACCESSTOKEN_FAILED"
-#define ProfileInfoFetched @"ProfileInfoFetched"
-
+#define ProfileInfoFetched  @"ProfileInfoFetched"
+#define NewsFeedFetched     @"NewsFeedFetched"
 
 #endif

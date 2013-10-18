@@ -131,10 +131,14 @@
     if (indexPath.section == 0 && indexPath.row == 0)
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profile"];
+        
         if (!cell) {
+            
             cell  = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"profile"];
             
             cell.textLabel.text = @"profile";
+            cell.selectionStyle = UITableViewCellSelectionStyleGray;
+            
             return cell;
         }
     }

@@ -8,6 +8,7 @@
 
 #import "NewsFeedViewController.h"
 #import "UserManager.h"
+#import "NewsFeedCell.h"
 
 @interface NewsFeedViewController ()
 
@@ -33,6 +34,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(fetchedNewsFeed:) name:NewsFeedFetched object:nil];
+    
+    [self fetchUserFeed];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,33 +46,49 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+-(NSMutableArray *)array
+{
+    if (!_array) {
+        _array = [[NSMutableArray alloc]initWithCapacity:10];
+    }
+    return _array;
+}
+
 -(void)fetchUserFeed
 {
-    [UserManager fetchNewsFeedForPage:0];
+    [[UserManager shareUserSingleton] fetchNewsFeedForPage:0];
+}
+
+-(void)fetchedNewsFeed:(NSNotification*)notify
+{
+    [self.array addObjectsFromArray:notify.object];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.array.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"NewsFeedCell";
+    NewsFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.event = [self.array objectAtIndex:indexPath.row];
     
-    // Configure the cell...
+    [cell setupCell];
     
     return cell;
 }

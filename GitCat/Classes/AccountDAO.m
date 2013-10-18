@@ -7,6 +7,7 @@
 //
 
 #import "AccountDAO.h"
+#import "AppConfig.h"
 
 @implementation AccountDAO
 
@@ -29,5 +30,11 @@
 {
     return @"yyyy-MM-dd'T'HH:mm:ssZZ";
 }
+
++ (NSURL *)prepUrlForApiCall:(NSString *)endpoint
+{
+    return [NSURL URLWithString:[[AppConfig getConfigValue:@"GithubApiHost"] stringByAppendingString:endpoint]];
+}
+
 
 @end

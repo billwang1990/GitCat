@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231B2C71181095DA00EE32A4 /* NewsFeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B2C70181095DA00EE32A4 /* NewsFeedCell.m */; };
+		231B2C7418109BAC00EE32A4 /* TimeLineEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B2C7318109BAC00EE32A4 /* TimeLineEvent.m */; };
+		231B2C781810AA0600EE32A4 /* ForkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B2C771810AA0600EE32A4 /* ForkEvent.m */; };
+		231B2C7B1810AE4F00EE32A4 /* WatchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B2C7A1810AE4F00EE32A4 /* WatchEvent.m */; };
+		231B2C7E1810AFD100EE32A4 /* CreateEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B2C7D1810AFD100EE32A4 /* CreateEvent.m */; };
+		231B2C811810AFFF00EE32A4 /* FollowEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B2C801810AFFE00EE32A4 /* FollowEvent.m */; };
+		231B2C841810B51100EE32A4 /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B2C831810B51100EE32A4 /* Repo.m */; };
 		231B6CD7180D066000F3AF34 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231B6CD6180D066000F3AF34 /* LoadingViewController.m */; };
 		237709631808F88A004B28E8 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 237709621808F88A004B28E8 /* MenuCell.m */; };
 		23AB12AD180A60D200AB5AE0 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AB12AC180A60D200AB5AE0 /* UserManager.m */; };
@@ -39,6 +46,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		231B2C6F181095DA00EE32A4 /* NewsFeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsFeedCell.h; path = Classes/Views/NewsFeedCell.h; sourceTree = "<group>"; };
+		231B2C70181095DA00EE32A4 /* NewsFeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsFeedCell.m; path = Classes/Views/NewsFeedCell.m; sourceTree = "<group>"; };
+		231B2C7218109BAC00EE32A4 /* TimeLineEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeLineEvent.h; path = Classes/Models/TimeLineEvent.h; sourceTree = "<group>"; };
+		231B2C7318109BAC00EE32A4 /* TimeLineEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeLineEvent.m; path = Classes/Models/TimeLineEvent.m; sourceTree = "<group>"; };
+		231B2C761810AA0600EE32A4 /* ForkEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForkEvent.h; path = Classes/Models/Events/ForkEvent.h; sourceTree = "<group>"; };
+		231B2C771810AA0600EE32A4 /* ForkEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForkEvent.m; path = Classes/Models/Events/ForkEvent.m; sourceTree = "<group>"; };
+		231B2C791810AE4F00EE32A4 /* WatchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WatchEvent.h; path = Classes/Models/Events/WatchEvent.h; sourceTree = "<group>"; };
+		231B2C7A1810AE4F00EE32A4 /* WatchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WatchEvent.m; path = Classes/Models/Events/WatchEvent.m; sourceTree = "<group>"; };
+		231B2C7C1810AFD100EE32A4 /* CreateEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEvent.h; path = Classes/Models/Events/CreateEvent.h; sourceTree = "<group>"; };
+		231B2C7D1810AFD100EE32A4 /* CreateEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEvent.m; path = Classes/Models/Events/CreateEvent.m; sourceTree = "<group>"; };
+		231B2C7F1810AFFE00EE32A4 /* FollowEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FollowEvent.h; path = Classes/Models/Events/FollowEvent.h; sourceTree = "<group>"; };
+		231B2C801810AFFE00EE32A4 /* FollowEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FollowEvent.m; path = Classes/Models/Events/FollowEvent.m; sourceTree = "<group>"; };
+		231B2C821810B51100EE32A4 /* Repo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Repo.h; path = Classes/Models/Repo.h; sourceTree = "<group>"; };
+		231B2C831810B51100EE32A4 /* Repo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Repo.m; path = Classes/Models/Repo.m; sourceTree = "<group>"; };
 		231B6CD5180D066000F3AF34 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingViewController.h; path = Classes/ViewControllers/LoadingViewController.h; sourceTree = "<group>"; };
 		231B6CD6180D066000F3AF34 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingViewController.m; path = Classes/ViewControllers/LoadingViewController.m; sourceTree = "<group>"; };
 		237709611808F88A004B28E8 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuCell.h; path = Classes/Views/MenuCell.h; sourceTree = "<group>"; };
@@ -108,6 +129,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231B2C751810A4F400EE32A4 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				231B2C7218109BAC00EE32A4 /* TimeLineEvent.h */,
+				231B2C7318109BAC00EE32A4 /* TimeLineEvent.m */,
+				231B2C761810AA0600EE32A4 /* ForkEvent.h */,
+				231B2C771810AA0600EE32A4 /* ForkEvent.m */,
+				231B2C791810AE4F00EE32A4 /* WatchEvent.h */,
+				231B2C7A1810AE4F00EE32A4 /* WatchEvent.m */,
+				231B2C7C1810AFD100EE32A4 /* CreateEvent.h */,
+				231B2C7D1810AFD100EE32A4 /* CreateEvent.m */,
+				231B2C7F1810AFFE00EE32A4 /* FollowEvent.h */,
+				231B2C801810AFFE00EE32A4 /* FollowEvent.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		23BE757F180878EC00CD1724 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +206,7 @@
 		23BE75AE18087BFD00CD1724 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				231B2C751810A4F400EE32A4 /* Events */,
 				23F339A71808B59000AE1A4F /* ViewControllers */,
 				23F339981808A3C100AE1A4F /* Helper */,
 				23BE75B7180882DE00CD1724 /* Models */,
@@ -186,6 +225,8 @@
 				237709621808F88A004B28E8 /* MenuCell.m */,
 				23C85521180D978100F7520A /* ProfileMetaCell.h */,
 				23C85522180D978100F7520A /* ProfileMetaCell.m */,
+				231B2C6F181095DA00EE32A4 /* NewsFeedCell.h */,
+				231B2C70181095DA00EE32A4 /* NewsFeedCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -212,6 +253,8 @@
 				23F339A51808AB8500AE1A4F /* AppConfig.m */,
 				23AB12B4180A65B500AB5AE0 /* User.h */,
 				23AB12B5180A65B500AB5AE0 /* User.m */,
+				231B2C821810B51100EE32A4 /* Repo.h */,
+				231B2C831810B51100EE32A4 /* Repo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -367,6 +410,13 @@
 				23C85523180D978100F7520A /* ProfileMetaCell.m in Sources */,
 				23DCF541180DA74C00FABA7D /* NSDate+RelativeDate.m in Sources */,
 				23DCF544180DD2F600FABA7D /* NewsFeedViewController.m in Sources */,
+				231B2C71181095DA00EE32A4 /* NewsFeedCell.m in Sources */,
+				231B2C7418109BAC00EE32A4 /* TimeLineEvent.m in Sources */,
+				231B2C781810AA0600EE32A4 /* ForkEvent.m in Sources */,
+				231B2C7B1810AE4F00EE32A4 /* WatchEvent.m in Sources */,
+				231B2C7E1810AFD100EE32A4 /* CreateEvent.m in Sources */,
+				231B2C811810AFFF00EE32A4 /* FollowEvent.m in Sources */,
+				231B2C841810B51100EE32A4 /* Repo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

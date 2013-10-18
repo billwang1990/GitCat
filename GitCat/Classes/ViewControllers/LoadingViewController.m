@@ -40,7 +40,7 @@
     self.title = @"Profile";
     
     [self.loadHud show:YES];
-    [UserManager fetchUserInfoWithToken:[AccountDAO getAccessToken]];
+    [User fetchUserInfoWithToken:[AccountDAO getAccessToken]];
 }
 
 - (void)didReceiveMemoryWarning
